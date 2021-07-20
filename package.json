@@ -1,0 +1,35 @@
+{
+  "name": "vue-ruler-bar",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve  --open",
+    "build": "vue-cli-service build",
+    "build:ruler": "vue-cli-service build --target lib --dest dist/vue-ruler --name DLRuler src/components/DLRuler.vue",
+    "build:nrs": "vue-cli-service build --target lib --dest dist/vue-nrs-bar --name NrsBar src/components/NrsBar.vue",
+    "build:nut": "vue-cli-service build --target lib --dest dist/vue-nut-bar --name NutBar src/components/NutBar.vue"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vue-plugin-touch": "^0.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-service": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
