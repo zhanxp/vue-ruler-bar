@@ -32,7 +32,7 @@ export default {
     },
     val_bg () {
       var val = parseInt(this.value) || 0;
-      if (val > 3) {
+      if (val >= 3) {
         return { background: '#ed564e' }
       } else {
         return { background: '#68ba65' }
@@ -40,7 +40,7 @@ export default {
     },
     pos_border () {
       var val = parseInt(this.value) || 0;
-      if (val > 3) {
+      if (val >= 3) {
         return { "border-top": "10px solid #ed564e" }
       } else {
         return { "border-top": "10px solid #68ba65" }

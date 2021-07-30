@@ -9,7 +9,7 @@
     <div class="text text-44">44</div>
     <div class="text text-66">66</div>
     <div class="nut-val" :style="val_pos">
-      <div class="val" :style="val_bg"> {{ value }}分
+      <div class="val" :style="val_bg"> {{ value - 36 }}分
         <i :style="pos_border"></i>
         <div :style="val_bg" class="point"></div>
       </div>
@@ -27,16 +27,16 @@ export default {
   computed: {
     val_pos () {
       var val = parseInt(this.value) || 0;
-      var percent = (val / 110) * 100;
+      var percent = (val / 146) * 100;
       return {
         left: percent + '%'
       }
     },
     val_bg () {
       var val = parseInt(this.value) || 0;
-      if (val >= 66) {
+      if (val >= 102) {
         return { background: '#6abb67' }
-      } else if (val > 43) {
+      } else if (val > 79) {
         return { background: '#f09352' }
       } else {
         return { background: '#ed564e' }
@@ -44,9 +44,9 @@ export default {
     },
     pos_border () {
       var val = parseInt(this.value) || 0;
-      if (val >= 66) {
+      if (val >= 102) {
         return { "border-top": "10px solid #6abb67" }
-      } else if (val > 43) {
+      } else if (val > 79) {
         return { "border-top": "10px solid #f09352" }
       } else {
         return { "border-top": "10px solid #ed564e" }
@@ -74,8 +74,8 @@ export default {
   background: #f09352;
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
-  left: 40%;
-  right: 40%;
+  left: 54%;
+  right: 31%;
   top: 0;
   position: absolute;
 }
@@ -83,7 +83,7 @@ export default {
   height: 6px;
   overflow: hidden;
   background: #6abb67;
-  left: 60%;
+  left: 69%;
   right: 0;
   top: 0;
   position: absolute;
@@ -96,11 +96,11 @@ export default {
 
 .nut-bar .text-44 {
   position: absolute;
-  left: 40%;
+  left: 54%;
 }
 .nut-bar .text-66 {
   position: absolute;
-  left: 60%;
+  left: 69%;
 }
 .nut-val {
   position: absolute;

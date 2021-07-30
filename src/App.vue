@@ -10,7 +10,10 @@
     Nrs评分<br />
     <NrsBar :value="3"></NrsBar><br />
     Nut评分<br />
-    <NutBar :value="40"></NutBar><br />
+    <div style="padding-left:25px;padding-right:30px;">
+      <NutBar :value="40"></NutBar>
+    </div>
+    <br />
   </div>
 
 </template>
