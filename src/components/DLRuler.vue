@@ -1,6 +1,6 @@
 <template xmlns:v-touch="http://www.w3.org/1999/xhtml">
   <div>
-    <div class="ruler-tips">{{numberValue}}.0 {{ unit || '' }}</div>
+    <div class="ruler-tips">{{numberValue}} {{ unit || '' }}</div>
     <div class="ruler " ref="testAA">
       <div class="main" :style="{'-webkit-transform': 'translateX(' +  mainValue + 'px)', 'width': getMainWidth+'px', position: 'relative',  left: '0px'}">
         <ul style="overflow: hidden;  -webkit-transform: translateX(45px);">
@@ -13,7 +13,6 @@
       <div class="cover-right"></div>
     </div>
   </div>
-
 </template>
 <script>
 export default {
@@ -143,7 +142,7 @@ export default {
 }
 .ruler-tips {
   text-align: center;
-  color: #0c2d8d;
+  color: #3fb1e3;
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -153,7 +152,8 @@ export default {
   height: 80px;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 300px;
+  /* width: 100%; */
   margin-left: auto;
   margin-right: auto;
   /* background-color: #f8faff;
@@ -214,7 +214,7 @@ export default {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-top: 8px solid #0c2d8d;
+  border-top: 8px solid #3fb1e3;
   position: absolute;
   left: 50%;
   top: 0;
